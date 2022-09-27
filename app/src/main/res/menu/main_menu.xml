@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_category"
+        android:icon="@drawable/ic_arrow_drop_down"
+        android:title="menu"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/sub_list_all"
+                android:icon="@drawable/ic_round"
+                android:title="Danh sách tất cả"/>
+            <item
+                android:id="@+id/sub_default"
+                android:icon="@drawable/ic_round"
+                android:title="Mặc định"/>
+            <item
+                android:id="@+id/sub_individual"
+                android:icon="@drawable/ic_menu"
+                android:title="Cá nhân"/>
+            <item
+                android:id="@+id/sub_work"
+                android:title="Làm việc"/>
+            <item
+                android:id="@+id/sub_shopping"
+                android:title="mua sắm"/>
+            <item
+                android:id="@+id/sub_complete"
+                android:title="Hoàn thành"/>
+
+        </menu>
+    </item>
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView">
+    </item>
+    <item
+        android:id="@+id/un_checkbox"
+        android:icon="@drawable/ic_check_box_outline"
+        android:title="un_checkbox"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/checkbox"
+        android:title="checkbox"
+        android:icon="@drawable/ic_check_box"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/share"
+        android:title="share"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/delete"
+        android:title="delete"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/menu3"
+        android:icon="@drawable/ic_search"
+        android:title="Danh sách nhiệm vụ"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu4"
+        android:icon="@drawable/ic_search"
+        android:title="Thêm rất nhiều"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu5"
+        android:icon="@drawable/ic_search"
+        android:title="Loại bỏ quảng cáo"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu6"
+        android:icon="@drawable/ic_search"
+        android:title="Ứng dụng nhiều hơn"
+        app:showAsAction="never" />
+
+</menu>

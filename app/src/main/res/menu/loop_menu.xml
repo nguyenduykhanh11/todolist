@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_no_repeat"
+        android:title="Không lặp lại" />
+    <item
+        android:id="@+id/item_once_a_day"
+        android:title="Một lần một ngày" />
+    <item
+        android:id="@+id/item_once_a_day_2_6"
+        android:title="Một lần một ngày(Thứ Hain-Thứ Sáu)" />
+    <item
+        android:id="@+id/item_once_a_week"
+        android:title="Một lần một tuần" />
+    <item
+        android:id="@+id/item_once_a_month"
+        android:title="Một lần một tháng" />
+    <item
+        android:id="@+id/item_once_a_year"
+        android:title="Một lần một năm" />
+    <item
+        android:id="@+id/item_other"
+        android:title="Khác..." />
+</menu>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_add"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/menu"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_what_is_done"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:text="Là những gì được thực hiện?"
+        android:textColor="@color/color_text"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_add" />
+
+    <LinearLayout
+        android:id="@+id/lnl_mission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_what_is_done">
+
+        <EditText
+            android:id="@+id/edt_mission"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:maxLines="1"
+            android:lines="1"
+            android:hint="Nhiệm vụ nhập đây"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_text_hint" />
+
+        <ImageView
+            android:id="@+id/img_view"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_mic" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_add_to_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:paddingTop="50dp"
+        android:text="Ngày đáo hạn"
+        android:textColor="@color/color_text"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lnl_mission" />
+
+    <LinearLayout
+        android:id="@+id/lnl_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_add_to_list">
+
+        <EditText
+            android:id="@+id/edt_day_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:hint="Không có ngày"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_text_hint" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_calendar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnl_hour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lnl_time">
+
+        <EditText
+            android:id="@+id/edt_hour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:hint="Không giờ (Cả ngày)"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_text_hint" />
+
+        <ImageView
+            android:id="@+id/img_access_time"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_access_time" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lnl_repeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lnl_hour"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lặp lại"
+            android:textColor="@color/color_text"
+            android:textSize="22dp" />
+        <TextView
+            android:id="@+id/tv_role_repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:text="Không lặp lại"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:layout_marginEnd="20dp"
+            android:textSize="20dp"
+            android:drawableRight="@drawable/ic_arrow_drop_down" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_date_due"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="Thêm vào danh sách"
+        android:textColor="@color/color_text"
+        android:textSize="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lnl_repeat" />
+
+
+    <LinearLayout
+        android:id="@+id/lnl_role"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:weightSum="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date_due">
+
+        <TextView
+            android:id="@+id/tv_role"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:text="Mặc định"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:layout_marginRight="20dp"
+            android:drawableRight="@drawable/ic_arrow_drop_down"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_add_list" />
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_action_button_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:tint="@color/color_text"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_check"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
